@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HV Projects - Accueil</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.min.css">
+  <style>
+    nav { display: flex; justify-content: space-between; border-bottom: 1px solid #444; padding-bottom: 10px; }
+    nav ul { list-style: none; display: flex; gap: 20px; padding: 0; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .card {
+      border: 1px solid #444;
+      padding: 15px;
+      border-radius: 8px;
+      transition: transform 0.2s, border-color 0.2s;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #005fcc;
+      text-decoration: none;
+    }
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 4px;
+      background: #222;
+    }
+    .card h3 { margin: 10px 0 5px 0; color: #005fcc; }
+    .lang-en { opacity: 0.4; cursor: not-allowed; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <strong>Noé</strong>
+  <ul>
+    <li><a href="index.html">Projets</a></li>
+    <li><a href="about.html">À propos</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li class="lang-en">EN</li>
+  </ul>
+</nav>
+
+<h1>Mes Projets HV</h1>
+<p>Explorations en haute tension et électronique de puissance.</p>
+
+<div class="grid">
+  <a href="projets/fr/1er_sgtc_fr.html" class="card">
+    <img src="img/1er_sgtc.png" alt="Tesla">
+    <h3>Ma première Bobine Tesla SGTC</h3>
+    <p>Arcs de 15cm avec un transfomateur d'enseigne néon (NST).</p>
+  </a>
+
+  <a href="zvs.html" class="card">
+    <img src="https://via.placeholder.com/300x150?text=ZVS+Driver" alt="ZVS">
+    <h3>Driver ZVS High Power</h3>
+    <p>Induction et arcs surpuissants avec des MOSFETs.</p>
+  </a>
+</div>
+
+</body>
+</html>

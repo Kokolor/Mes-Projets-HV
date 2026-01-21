@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.min.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <title>Simple SGTC - Projet HV</title>
+  <style>
+    .header-nav { margin-top: 20px; font-size: 0.9em; }
+    .project-image {
+      width: 100%;
+      border: 2px solid #444;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .spec-card {
+      background: #1a2026;
+      padding: 15px;
+      border-radius: 8px;
+      border-left: 4px solid #005fcc;
+    }
+    .spec-card h4 { margin: 0 0 5px 0; color: #005fcc; font-size: 0.9em; text-transform: uppercase; }
+    .spec-card p { margin: 0; font-size: 1.1em; font-weight: bold; }
+
+    .danger-zone {
+      border: 1px solid #ff4444;
+      background: rgba(255, 68, 68, 0.1);
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 40px;
+    }
+    .danger-title { color: #ff4444; font-weight: bold; display: flex; align-items: center; gap: 10px; }
+  </style>
+</head>
+<body>
+
+<div class="header-nav">
+  <a href="../../index.html">⬅ Retour aux projets</a>
+</div>
+
+<header>
+  <h1>Simple SGTC</h1>
+  <p><em>Ma toute première bobine Tesla à éclateur.</em></p>
+</header>
+
+<img src="../../img/1er_sgtc_non_accordee.png" class="project-image" alt="Arc électrique">
+<p style="text-align: center; font-style: italic; opacity: 0.7;">
+  Note : L'arc est encore petit car la bobine n'était pas encore accordée lors de cette photo.
+</p>
+
+<section>
+  <h2>Description</h2>
+  <p>
+    Ce projet consiste en une bobine Tesla classique à éclateur (Spark Gap).
+
+    Le primaire de ce type de bobine Tesla consiste en un transformateur haute tension, qui va charger le condensateur primaire (banque
+    MMC). Banque qui va se décharger dans l'éclateur, pour partir dans la bobine primaire de quelques tours uniquement.
+
+    Le secondaire est constitué de environ 1000 à 2000 tours, ainsi que d'un topload qui va permettre de faire baisser la
+    fréquence de résonance.</p>
+
+  <p>La fréquence de résonance théorique est calculée avec la formule de Thomson :</p>
+  <p style="font-size: 1.5em; text-align: center;">
+    $$f_r = \frac{1}{2\pi \sqrt{LC}}$$
+  </p>
+  <ul>
+    <li><strong>f<sub>r</sub></strong> : Fréquence (Hz)</li>
+    <li><strong>L</strong> : Inductance (H)</li>
+    <li><strong>C</strong> : Capacité (F)</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Caractéristiques Techniques</h2>
+  <div class="specs-grid">
+    <div class="spec-card">
+      <h4>Alimentation (NST)</h4>
+      <p>9kV @ 50mA</p>
+    </div>
+    <div class="spec-card">
+      <h4>Condensateurs (MMC)</h4>
+      <p>60x 2kV 47nF</p>
+      <p>5x12 condensateurs en série</p>
+    </div>
+    <div class="spec-card">
+      <h4>Secondaire</h4>
+      <p>Environ 1300 tours (0.4mm)</p>
+    </div>
+    <div class="spec-card">
+      <h4>Fréquence</h4>
+      <p>Environ 190kHz</p>
+    </div>
+  </div>
+</section>
+
+<div class="danger-zone">
+  <div class="danger-title">SÉCURITÉ</div>
+  <p style="margin-bottom: 0;">
+    La haute tension est mortelle. Je ne peux pas vous recommander de reproduire ce projet sans connaissances suffisantes sur la sécurité.
+
+    Sur une SGTC, même si la haute fréquence sauve la mise, toucher l'arc est dangereux. J'ai touché un arc involontairement, et c'est très
+    désagréable, je ne récidiverai pas !
+  </p>
+</div>
+
+</body>
+</html>
